@@ -17,5 +17,7 @@ public interface CompradorRepository extends JpaRepository<Comprador, Long> {
 	public List<Comprador> findByNomeContainingIgnoreCase(String nome);
 	public Optional<Comprador> findByCPFAndEmailAndSenha(long cpf, String email, String senha);
 	public Optional<Comprador> findByCPFAndEmail(long cpf, String email); 
+	public Optional<Comprador> findByEmail(String email);
+	public Optional<Comprador> findByCPF(long cpf);
 
 }
